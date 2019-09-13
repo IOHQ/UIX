@@ -1,0 +1,19 @@
+{
+  "name": "Opalescent",
+  "version": "1.0.0",
+  "description": "OpalChat Client",
+  "main": "_/watch.js",
+  "scripts": {
+    "build": "node _/build.js",
+    "create": "node _/create.js",
+    "deploy": "node _/deploy.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node _/watch.js"
+  },
+  "dependencies": {
+    "cssdoc": "^1.0.0",
+    "cssparser": "^0.9.4",
+    "distruct": "^1.0.5",
+    "ejs": "^2.7.1"
+  }
+}

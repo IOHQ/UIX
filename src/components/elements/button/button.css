@@ -1,0 +1,24 @@
+/*---
+title: Buttons
+section: Elements
+---
+Create a button.
+ 
+```html
+<a class="button">Click me!</a>
+```
+*/ 
+
+.button {
+    display:inline-block;
+    padding:10px;
+    border:1px solid black;
+    border-radius:2px;
+    margin:2px;
+}
+
+.button:hover {
+    background:whitesmoke;
+    border-color:gray;
+    cursor:pointer;
+}

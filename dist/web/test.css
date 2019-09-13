@@ -1,0 +1,27 @@
+/*---
+title: What's the point?
+section: Introduction
+---
+Mounts give us more flexibility when we need things to in non-responsive positions on the screen.
+
+```html
+ <div class="mount top right" style="background:gray;width:100px; height:100px;">
+    <div class="frame">
+        <div class="float bottom left" style="width:35px; height:35px; background:aqua;">
+            Hello!
+        </div>
+    </div>
+</div> 
+```
+```example
+<div style="position:relative; height:200px; width:200px; border:1px dotted gray">
+<div class="mount top right" style="background:gray;width:100px; height:100px;">
+    <div class="frame">
+        <div class="float bottom left" style="width:35px; height:35px; background:aqua;">
+            Hello!
+        </div>
+    </div>
+</div>
+</div>
+```
+*/ 

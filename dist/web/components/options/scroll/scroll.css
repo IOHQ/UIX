@@ -1,0 +1,19 @@
+/*---
+title: Scroll
+section: Options
+---
+Add a shadow to your element.
+ 
+```example
+<a class="shadow button">Spooky scary drop shadows!</a>
+```
+
+.scroll {
+    overflow:auto;
+}
+.scroll-x {
+    overflow-x:auto;
+}
+.scroll-y {
+    overflow-y:auto;
+}

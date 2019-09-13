@@ -1,0 +1,32 @@
+/*---
+title: Stretch
+section: Options
+---
+Stretch an element to fill the screen.
+ 
+```example
+<a class="button stretch horizontal">They call me armstrong. Stretch, armstrong.</a>
+<a class="button stretch y">They call me armstrong. Stretch, armstrong.</a>
+```
+
+ 
+*/ 
+.stretch {
+ margin:0;
+ top:0px;
+ right:0px;
+ left:0px;
+ bottom:0px;
+}
+
+.stretch-horizontal, .stretch-x {
+ margin:0;
+ left:0px;
+ right:0px;
+}
+
+.stretch-vertical, .stretch-y {
+ margin:0;
+ top:0px;
+ bottom:0px;
+}

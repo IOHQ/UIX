@@ -1,0 +1,24 @@
+{
+  "product": {
+    "name": "uix",
+    "version": "1.0.0",
+    "description": "UI/UX Framework",
+    "author": "tj@iohq.org"
+  },
+  "server": {
+    "port": "8080"
+  },
+  "directories": {
+    "source": "src",
+    "builds": "dist"
+  },
+  "variables": {},
+  "builds": [
+    {
+      "name": "web",
+      "delimiter": "*",
+      "extensions": [ "css", "js", "html", "json" ],
+      "deploy": "deploy.js"
+    }
+  ]
+}

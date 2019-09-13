@@ -1,0 +1,71 @@
+/*
+ * $.css
+ */
+
+ 
+<* // COMPILE FOLDERS
+
+    var compressed = [], uncompressed = [];
+     
+    fs.readdirSync(`${dir}/.css`).forEach(f=>{ 
+        console.log('parsing:', f);
+        var css = include(`${dir}/.css/${f}`);
+        uncompressed.push(css.toString());
+        css = css.replace(/\/\*(.*)\*\//gi,'')
+                .replace(/\;\ {1,5}/gi,';')
+                .replace(/\:\ {1,5}/gi,':')
+                .replace(/\ {1,5}\{/gi,'{')
+                .replace(/\{ {1,5}/gi,'{')
+                .replace(/\;{1,5}}/gi,'}')
+                .replace(/\, {1,5}/gi,',')
+            ;
+        compressed.push(css);
+    });
+    
+    ['elements','classes','colors','modules','containers','views','options'].forEach(what=>{
+        if (!fs.existsSync(`${dir}/components/${what}`)) return false;
+        
+        if (fs.existsSync(`${dir}/components/${what}/${what}.css`)) {
+            let text = (include(`${dir}/components/${what}/${what}.css`).toString());
+            uncompressed.push(text);
+            text = fn.flatten(text);
+            text = text
+                .replace(/\/\*(.*)\*\//gi,'')
+                .replace(/\;\ {1,5}/gi,';')
+                .replace(/\:\ {1,5}/gi,':')
+                .replace(/\ {1,5}\{/gi,'{')
+                .replace(/\{ {1,5}/gi,'{')
+                .replace(/\;{1,5}}/gi,'}')
+                .replace(/\, {1,5}/gi,',')
+            ;
+            compressed.push(text);
+            
+        }
+         
+        fn.directory(dir,'components',what).forEach(f=> { 
+            if (!fs.existsSync(`${dir}/components/${what}/${f}/${f}.css`)) return false;
+            let text = include(`${dir}/components/${what}/${f}/${f}.css`).toString(); 
+            uncompressed.push(text.toString());
+            text = fn.flatten(text);
+            text = text
+                .replace(/\/\*(.*)\*\//gi,'')
+                .replace(/\;\ {1,5}/gi,';')
+                .replace(/\:\ {1,5}/gi,':')
+                .replace(/\ {1,5}\{/gi,'{')
+                .replace(/\{ {1,5}/gi,'{')
+                .replace(/\;{1,5}}/gi,'}')
+                .replace(/\, {1,5}/gi,',')
+            ;
+            compressed.push(`/*<${what}/${f.split('.')[0]}>*/\n${text.trim()}\n`);
+        });
+    });
+    console.log(uncompressed);
+    fs.writeFileSync(`${dir}/dist/$.css`, uncompressed.join('\n'));
+    console.log('parsing doc...');
+    global.doc({
+      title:         "$.CSS",
+      inputDir:     `${dir}/dist`,    // directory with the css files
+      outputDir:     `${dir}`  // directory that will be created the page
+    });
+-*>
+<*-compressed.join('\n')-*>

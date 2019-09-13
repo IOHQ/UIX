@@ -1,0 +1,128 @@
+/*---
+title: Introduction
+section: Colors
+---
+
+Colors give us soft colors to use when an element needs to have certain coloring regardless of the theme.
+
+These are intended only to be used in cases where an element needs to disregard an applied theme.
+
+```html
+    <span class="text fg-red">This text is red!</span>
+    <span class="button bg-black fg-purple">This button is black with purple text!</span>
+```
+```example
+    <span class="text fg-red">This text is red!</span>
+    <span class="button bg-black fg-purple">This button is black with purple text!</span>
+```
+
+Each color additionally has 10 light and dark versions to adjust to.
+
+
+```html
+<*["purple", "orange"].forEach(function(color){*> 
+    <* for(var x=1; x<6; x++){ *>
+    <span class="button bg-dark<*=color*>-<*=x*> fg-light<*=color*>-<*=x*>"> bg-dark<*=color*><*=x*> fg-light<*=color*>-<*=x*></span>
+    <*}*> 
+<*});*>
+```
+```example
+<*["purple", "orange"].forEach(function(color){*> 
+    <* for(var x=1; x<6; x++){ *>
+    <span class="button bg-dark<*=color*>-<*=x*> fg-light<*=color*>-<*=x*>"> bg-dark<*=color*><*=x*> fg-light<*=color*>-<*=x*></span>
+    <*}*> 
+<*});*>
+```
+
+*/ 
+
+<*
+function adjust(col, amt) {
+  
+    var usePound = false;
+  
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+ 
+     amt = amt * 9;
+ 
+    var num = parseInt(col,16);
+ 
+    var r = (num >> 16) + amt;
+ 
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+ 
+    var b = ((num >> 8) & 0x00FF) + amt;
+ 
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+ 
+    var g = (num & 0x0000FF) + amt;
+ 
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+ 
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+  
+}
+var colors = {
+    "red":       "EB2D3A",
+    "orange":    "FF7043",
+    "yellow":    "EED7A1",
+    "green":     "90EE90",
+    "brown":     "CD8B62",
+    
+    "blue":      "00E5FF",
+    "purple":    "A26BC7",
+    "pink":      "F48FB1",
+    
+    "white":     "00BCD4",
+    "black":     "212121",
+    "gray":      "78909C"
+};
+*>
+
+<* for(var name in colors){ var color = colors[name]; *>
+
+    .fg-<*=name*> { color:#<*=color*>; }
+    
+    .fg-<*=name*> { color:#<*=color*>; }
+    .fg-light<*=name*> { color:#<*=adjust(color, 3)*> } 
+    <* for(var x=1; x<6; x++){ *>
+    .fg-light<*=name*>-<*=x*> { color:#<*=adjust(color, x)*> } 
+    <* } *>
+    
+    
+    .fg-<*=name*> { color:#<*=color*>; }
+    .fg-dark<*=name*> { color:#<*=adjust(color, 3)*> } 
+    <* for(var x=1; x<6; x++){ *>
+    .fg-dark<*=name*>-<*=x*> { color:#<*=adjust(color, -x)*> } 
+    <* } *>
+    
+    
+    
+    .bg-<*=name*> { background-color:#<*=color*>; }
+    .bg-light<*=name*> { background-color:#<*=adjust(color, 3)*> } 
+    <* for(var x=1; x<6; x++){ *>
+    .bg-light<*=name*>-<*=x*> { background-color:#<*=adjust(color, x)*> } 
+    <* } *>
+    
+    
+    .bg-<*=name*> { background-color:#<*=color*>; }
+    .bg-dark<*=name*> { background-color:#<*=adjust(color, 3)*> } 
+    <* for(var x=1; x<6; x++){ *>
+    .bg-dark<*=name*>-<*=x*> { background-color:#<*=adjust(color, -x)*> } 
+    <* } *>
+    
+    
+    
+    .border-<*=name*> { border-color:#<*=color*>; }
+    .border-light<*=name*> { border-color:#<*=adjust(color, 3)*> } 
+    <* for(var x=1; x<6; x++){ *>
+    .border-light<*=name*>-<*=x*> { border-color:#<*=adjust(color, x)*> } 
+    <* } *>
+
+<* } *>

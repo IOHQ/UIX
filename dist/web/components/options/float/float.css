@@ -1,0 +1,16 @@
+.float {
+    position:absolute;
+    
+}
+.float.left {
+    left:0px;
+}
+.float.right {
+    right:0px;
+}
+.float.top {
+    top:0px;
+}
+.float.bottom {
+    bottom:0px;
+}

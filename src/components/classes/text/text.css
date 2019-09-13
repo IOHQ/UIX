@@ -1,0 +1,24 @@
+/*---
+title: .text
+section: Classes
+---
+ 
+The ``text`` helps define where text is on the page. Elements that contain only text should have this class assigned.
+
+```example
+<h1 class="text">Lorem Ipsum</h1>
+<p class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h1>
+​```
+ 
+```html
+<h1 class="text">Lorem Ipsum</h1>
+<p class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h1>
+​```
+
+ 
+*/
+.text {
+    line-height:18pt;
+    letter-spacing:0.9pt;
+    font-family:arial;
+}

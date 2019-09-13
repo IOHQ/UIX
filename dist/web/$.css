@@ -1,0 +1,278 @@
+/*
+ * $.css
+ */
+
+ 
+/*---
+title:About | Yes,it's <i>another</i> frontend framework.
+section:Introduction
+---
+
+I know what you're thinking,<q>We have <b>plenty</b> of these already,bro.</q>. Here me out though,because this framework focuses on some niche points that others don't - standards!
+
+This framework is designed in a way that rather you're making a portfolio,company website,product page or full web application,themes can be switched out so that no matter the purpose,changing things up can be as easy as changing a link tag!
+
+*/ 
+html{
+	font-family:sans-serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%
+}
+
+body{
+    margin:0px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary{
+	display:block
+}
+
+audio,
+canvas,
+progress,
+video{
+	display:inline-block;
+	vertical-align:baseline
+}
+
+audio:not([controls]){
+	display:none;
+	height:0
+}
+
+[hidden],
+template{
+	display:none
+}
+
+a{
+	background-color:transparent
+}
+
+a:active,
+a:hover{
+	outline:0
+}
+
+abbr[title]{
+	border-bottom:1px dotted
+}
+
+b,
+strong{
+	font-weight:700
+}
+
+dfn{
+	font-style:italic
+}
+
+h1{
+	font-size:2em;
+	margin:.67em 0
+}
+
+mark{
+	background:#ff0;
+	color:#000
+}
+
+small{
+	font-size:80%
+}
+
+sub,
+sup{
+	font-size:75%;
+	line-height:0;
+	position:relative;
+	vertical-align:baseline
+}
+
+sup{
+	top:-.5em
+}
+
+sub{
+	bottom:-.25em
+}
+
+img{
+	border:0
+}
+
+svg:not(:root){
+	overflow:hidden
+}
+
+figure{
+	margin:1em 40px
+}
+
+hr{
+	box-sizing:content-box;
+	height:0
+}
+
+pre{
+	overflow:auto
+}
+
+code,
+kbd,
+pre,
+samp{
+	font-family:monospace,monospace;
+	font-size:1em
+}
+
+button,
+input,
+optgroup,
+select,
+textarea{
+	color:inherit;
+	font:inherit;
+	margin:0
+}
+
+button{
+	overflow:visible
+}
+
+button,
+select{
+	text-transform:none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+	-webkit-appearance:button;
+	cursor:pointer
+}
+
+button[disabled],
+html input[disabled]{
+	cursor:default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner{
+	border:0;
+	padding:0
+}
+
+input{
+	line-height:normal
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+	box-sizing:border-box;
+	padding:0
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+	height:auto
+}
+
+input[type="search"]{
+	-webkit-appearance:textfield;
+	box-sizing:content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{
+	-webkit-appearance:none
+}
+
+fieldset{
+	border:1px solid silver;
+	margin:0 2px;
+	padding:.35em .625em .75em
+}
+
+legend{
+	border:0;
+	padding:0
+}
+
+textarea{
+	overflow:auto
+}
+
+optgroup{
+	font-weight:700
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+td,
+th{
+	padding:0
+}
+  
+input{
+	border:0px;
+	background:none;
+	display:inline-block;
+	width:100%;
+	height:100%;
+	outline:none;
+	padding:0px;
+	margin:0px;
+} 
+
+/*<elements/button>*/
+.button{display:inline-block;padding:10px;border:1px solid black;border-radius:2px;margin:2px}.button:hover{background:whitesmoke;border-color:gray;cursor:pointer}
+
+/*<elements/headings>*/
+h1,h2,h3,h4,h5{padding:5px;margin:5px}h1{font-size:2.5em}h2{font-size:2em}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{font-size:0.9em}
+
+
+/*<classes/text>*/
+.text{line-height:18pt;letter-spacing:0.9pt;font-family:arial}
+
+ .fg-red{color:#EB2D3A} .fg-red{color:#EB2D3A} .fg-lightred{color:#ff4855 } .fg-lightred-1{color:#f43643 } .fg-lightred-2{color:#fd3f4c } .fg-lightred-3{color:#ff4855 } .fg-lightred-4{color:#ff515e } .fg-lightred-5{color:#ff5a67 }  .fg-red{color:#EB2D3A} .fg-darkred{color:#ff4855 } .fg-darkred-1{color:#e22431 } .fg-darkred-2{color:#d91b28 } .fg-darkred-3{color:#d0121f } .fg-darkred-4{color:#c70916 } .fg-darkred-5{color:#be000d }   .bg-red{background-color:#EB2D3A} .bg-lightred{background-color:#ff4855 } .bg-lightred-1{background-color:#f43643 } .bg-lightred-2{background-color:#fd3f4c } .bg-lightred-3{background-color:#ff4855 } .bg-lightred-4{background-color:#ff515e } .bg-lightred-5{background-color:#ff5a67 }  .bg-red{background-color:#EB2D3A} .bg-darkred{background-color:#ff4855 } .bg-darkred-1{background-color:#e22431 } .bg-darkred-2{background-color:#d91b28 } .bg-darkred-3{background-color:#d0121f } .bg-darkred-4{background-color:#c70916 } .bg-darkred-5{background-color:#be000d }   .border-red{border-color:#EB2D3A} .border-lightred{border-color:#ff4855 } .border-lightred-1{border-color:#f43643 } .border-lightred-2{border-color:#fd3f4c } .border-lightred-3{border-color:#ff4855 } .border-lightred-4{border-color:#ff515e } .border-lightred-5{border-color:#ff5a67 } .fg-orange{color:#FF7043} .fg-orange{color:#FF7043} .fg-lightorange{color:#ff8b5e } .fg-lightorange-1{color:#ff794c } .fg-lightorange-2{color:#ff8255 } .fg-lightorange-3{color:#ff8b5e } .fg-lightorange-4{color:#ff9467 } .fg-lightorange-5{color:#ff9d70 }  .fg-orange{color:#FF7043} .fg-darkorange{color:#ff8b5e } .fg-darkorange-1{color:#f6673a } .fg-darkorange-2{color:#ed5e31 } .fg-darkorange-3{color:#e45528 } .fg-darkorange-4{color:#db4c1f } .fg-darkorange-5{color:#d24316 }   .bg-orange{background-color:#FF7043} .bg-lightorange{background-color:#ff8b5e } .bg-lightorange-1{background-color:#ff794c } .bg-lightorange-2{background-color:#ff8255 } .bg-lightorange-3{background-color:#ff8b5e } .bg-lightorange-4{background-color:#ff9467 } .bg-lightorange-5{background-color:#ff9d70 }  .bg-orange{background-color:#FF7043} .bg-darkorange{background-color:#ff8b5e } .bg-darkorange-1{background-color:#f6673a } .bg-darkorange-2{background-color:#ed5e31 } .bg-darkorange-3{background-color:#e45528 } .bg-darkorange-4{background-color:#db4c1f } .bg-darkorange-5{background-color:#d24316 }   .border-orange{border-color:#FF7043} .border-lightorange{border-color:#ff8b5e } .border-lightorange-1{border-color:#ff794c } .border-lightorange-2{border-color:#ff8255 } .border-lightorange-3{border-color:#ff8b5e } .border-lightorange-4{border-color:#ff9467 } .border-lightorange-5{border-color:#ff9d70 } .fg-yellow{color:#EED7A1} .fg-yellow{color:#EED7A1} .fg-lightyellow{color:#fff2bc } .fg-lightyellow-1{color:#f7e0aa } .fg-lightyellow-2{color:#ffe9b3 } .fg-lightyellow-3{color:#fff2bc } .fg-lightyellow-4{color:#fffbc5 } .fg-lightyellow-5{color:#ffffce }  .fg-yellow{color:#EED7A1} .fg-darkyellow{color:#fff2bc } .fg-darkyellow-1{color:#e5ce98 } .fg-darkyellow-2{color:#dcc58f } .fg-darkyellow-3{color:#d3bc86 } .fg-darkyellow-4{color:#cab37d } .fg-darkyellow-5{color:#c1aa74 }   .bg-yellow{background-color:#EED7A1} .bg-lightyellow{background-color:#fff2bc } .bg-lightyellow-1{background-color:#f7e0aa } .bg-lightyellow-2{background-color:#ffe9b3 } .bg-lightyellow-3{background-color:#fff2bc } .bg-lightyellow-4{background-color:#fffbc5 } .bg-lightyellow-5{background-color:#ffffce }  .bg-yellow{background-color:#EED7A1} .bg-darkyellow{background-color:#fff2bc } .bg-darkyellow-1{background-color:#e5ce98 } .bg-darkyellow-2{background-color:#dcc58f } .bg-darkyellow-3{background-color:#d3bc86 } .bg-darkyellow-4{background-color:#cab37d } .bg-darkyellow-5{background-color:#c1aa74 }   .border-yellow{border-color:#EED7A1} .border-lightyellow{border-color:#fff2bc } .border-lightyellow-1{border-color:#f7e0aa } .border-lightyellow-2{border-color:#ffe9b3 } .border-lightyellow-3{border-color:#fff2bc } .border-lightyellow-4{border-color:#fffbc5 } .border-lightyellow-5{border-color:#ffffce } .fg-green{color:#90EE90} .fg-green{color:#90EE90} .fg-lightgreen{color:#abffab } .fg-lightgreen-1{color:#99f799 } .fg-lightgreen-2{color:#a2ffa2 } .fg-lightgreen-3{color:#abffab } .fg-lightgreen-4{color:#b4ffb4 } .fg-lightgreen-5{color:#bdffbd }  .fg-green{color:#90EE90} .fg-darkgreen{color:#abffab } .fg-darkgreen-1{color:#87e587 } .fg-darkgreen-2{color:#7edc7e } .fg-darkgreen-3{color:#75d375 } .fg-darkgreen-4{color:#6cca6c } .fg-darkgreen-5{color:#63c163 }   .bg-green{background-color:#90EE90} .bg-lightgreen{background-color:#abffab } .bg-lightgreen-1{background-color:#99f799 } .bg-lightgreen-2{background-color:#a2ffa2 } .bg-lightgreen-3{background-color:#abffab } .bg-lightgreen-4{background-color:#b4ffb4 } .bg-lightgreen-5{background-color:#bdffbd }  .bg-green{background-color:#90EE90} .bg-darkgreen{background-color:#abffab } .bg-darkgreen-1{background-color:#87e587 } .bg-darkgreen-2{background-color:#7edc7e } .bg-darkgreen-3{background-color:#75d375 } .bg-darkgreen-4{background-color:#6cca6c } .bg-darkgreen-5{background-color:#63c163 }   .border-green{border-color:#90EE90} .border-lightgreen{border-color:#abffab } .border-lightgreen-1{border-color:#99f799 } .border-lightgreen-2{border-color:#a2ffa2 } .border-lightgreen-3{border-color:#abffab } .border-lightgreen-4{border-color:#b4ffb4 } .border-lightgreen-5{border-color:#bdffbd } .fg-brown{color:#CD8B62} .fg-brown{color:#CD8B62} .fg-lightbrown{color:#e8a67d } .fg-lightbrown-1{color:#d6946b } .fg-lightbrown-2{color:#df9d74 } .fg-lightbrown-3{color:#e8a67d } .fg-lightbrown-4{color:#f1af86 } .fg-lightbrown-5{color:#fab88f }  .fg-brown{color:#CD8B62} .fg-darkbrown{color:#e8a67d } .fg-darkbrown-1{color:#c48259 } .fg-darkbrown-2{color:#bb7950 } .fg-darkbrown-3{color:#b27047 } .fg-darkbrown-4{color:#a9673e } .fg-darkbrown-5{color:#a05e35 }   .bg-brown{background-color:#CD8B62} .bg-lightbrown{background-color:#e8a67d } .bg-lightbrown-1{background-color:#d6946b } .bg-lightbrown-2{background-color:#df9d74 } .bg-lightbrown-3{background-color:#e8a67d } .bg-lightbrown-4{background-color:#f1af86 } .bg-lightbrown-5{background-color:#fab88f }  .bg-brown{background-color:#CD8B62} .bg-darkbrown{background-color:#e8a67d } .bg-darkbrown-1{background-color:#c48259 } .bg-darkbrown-2{background-color:#bb7950 } .bg-darkbrown-3{background-color:#b27047 } .bg-darkbrown-4{background-color:#a9673e } .bg-darkbrown-5{background-color:#a05e35 }   .border-brown{border-color:#CD8B62} .border-lightbrown{border-color:#e8a67d } .border-lightbrown-1{border-color:#d6946b } .border-lightbrown-2{border-color:#df9d74 } .border-lightbrown-3{border-color:#e8a67d } .border-lightbrown-4{border-color:#f1af86 } .border-lightbrown-5{border-color:#fab88f } .fg-blue{color:#00E5FF} .fg-blue{color:#00E5FF} .fg-lightblue{color:#1bffff } .fg-lightblue-1{color:#9eeff } .fg-lightblue-2{color:#12f7ff } .fg-lightblue-3{color:#1bffff } .fg-lightblue-4{color:#24ffff } .fg-lightblue-5{color:#2dffff }  .fg-blue{color:#00E5FF} .fg-darkblue{color:#1bffff } .fg-darkblue-1{color:#dcf6 } .fg-darkblue-2{color:#d3ed } .fg-darkblue-3{color:#cae4 } .fg-darkblue-4{color:#c1db } .fg-darkblue-5{color:#b8d2 }   .bg-blue{background-color:#00E5FF} .bg-lightblue{background-color:#1bffff } .bg-lightblue-1{background-color:#9eeff } .bg-lightblue-2{background-color:#12f7ff } .bg-lightblue-3{background-color:#1bffff } .bg-lightblue-4{background-color:#24ffff } .bg-lightblue-5{background-color:#2dffff }  .bg-blue{background-color:#00E5FF} .bg-darkblue{background-color:#1bffff } .bg-darkblue-1{background-color:#dcf6 } .bg-darkblue-2{background-color:#d3ed } .bg-darkblue-3{background-color:#cae4 } .bg-darkblue-4{background-color:#c1db } .bg-darkblue-5{background-color:#b8d2 }   .border-blue{border-color:#00E5FF} .border-lightblue{border-color:#1bffff } .border-lightblue-1{border-color:#9eeff } .border-lightblue-2{border-color:#12f7ff } .border-lightblue-3{border-color:#1bffff } .border-lightblue-4{border-color:#24ffff } .border-lightblue-5{border-color:#2dffff } .fg-purple{color:#A26BC7} .fg-purple{color:#A26BC7} .fg-lightpurple{color:#bd86e2 } .fg-lightpurple-1{color:#ab74d0 } .fg-lightpurple-2{color:#b47dd9 } .fg-lightpurple-3{color:#bd86e2 } .fg-lightpurple-4{color:#c68feb } .fg-lightpurple-5{color:#cf98f4 }  .fg-purple{color:#A26BC7} .fg-darkpurple{color:#bd86e2 } .fg-darkpurple-1{color:#9962be } .fg-darkpurple-2{color:#9059b5 } .fg-darkpurple-3{color:#8750ac } .fg-darkpurple-4{color:#7e47a3 } .fg-darkpurple-5{color:#753e9a }   .bg-purple{background-color:#A26BC7} .bg-lightpurple{background-color:#bd86e2 } .bg-lightpurple-1{background-color:#ab74d0 } .bg-lightpurple-2{background-color:#b47dd9 } .bg-lightpurple-3{background-color:#bd86e2 } .bg-lightpurple-4{background-color:#c68feb } .bg-lightpurple-5{background-color:#cf98f4 }  .bg-purple{background-color:#A26BC7} .bg-darkpurple{background-color:#bd86e2 } .bg-darkpurple-1{background-color:#9962be } .bg-darkpurple-2{background-color:#9059b5 } .bg-darkpurple-3{background-color:#8750ac } .bg-darkpurple-4{background-color:#7e47a3 } .bg-darkpurple-5{background-color:#753e9a }   .border-purple{border-color:#A26BC7} .border-lightpurple{border-color:#bd86e2 } .border-lightpurple-1{border-color:#ab74d0 } .border-lightpurple-2{border-color:#b47dd9 } .border-lightpurple-3{border-color:#bd86e2 } .border-lightpurple-4{border-color:#c68feb } .border-lightpurple-5{border-color:#cf98f4 } .fg-pink{color:#F48FB1} .fg-pink{color:#F48FB1} .fg-lightpink{color:#ffaacc } .fg-lightpink-1{color:#fd98ba } .fg-lightpink-2{color:#ffa1c3 } .fg-lightpink-3{color:#ffaacc } .fg-lightpink-4{color:#ffb3d5 } .fg-lightpink-5{color:#ffbcde }  .fg-pink{color:#F48FB1} .fg-darkpink{color:#ffaacc } .fg-darkpink-1{color:#eb86a8 } .fg-darkpink-2{color:#e27d9f } .fg-darkpink-3{color:#d97496 } .fg-darkpink-4{color:#d06b8d } .fg-darkpink-5{color:#c76284 }   .bg-pink{background-color:#F48FB1} .bg-lightpink{background-color:#ffaacc } .bg-lightpink-1{background-color:#fd98ba } .bg-lightpink-2{background-color:#ffa1c3 } .bg-lightpink-3{background-color:#ffaacc } .bg-lightpink-4{background-color:#ffb3d5 } .bg-lightpink-5{background-color:#ffbcde }  .bg-pink{background-color:#F48FB1} .bg-darkpink{background-color:#ffaacc } .bg-darkpink-1{background-color:#eb86a8 } .bg-darkpink-2{background-color:#e27d9f } .bg-darkpink-3{background-color:#d97496 } .bg-darkpink-4{background-color:#d06b8d } .bg-darkpink-5{background-color:#c76284 }   .border-pink{border-color:#F48FB1} .border-lightpink{border-color:#ffaacc } .border-lightpink-1{border-color:#fd98ba } .border-lightpink-2{border-color:#ffa1c3 } .border-lightpink-3{border-color:#ffaacc } .border-lightpink-4{border-color:#ffb3d5 } .border-lightpink-5{border-color:#ffbcde } .fg-white{color:#00BCD4} .fg-white{color:#00BCD4} .fg-lightwhite{color:#1bd7ef } .fg-lightwhite-1{color:#9c5dd } .fg-lightwhite-2{color:#12cee6 } .fg-lightwhite-3{color:#1bd7ef } .fg-lightwhite-4{color:#24e0f8 } .fg-lightwhite-5{color:#2de9ff }  .fg-white{color:#00BCD4} .fg-darkwhite{color:#1bd7ef } .fg-darkwhite-1{color:#b3cb } .fg-darkwhite-2{color:#aac2 } .fg-darkwhite-3{color:#a1b9 } .fg-darkwhite-4{color:#98b0 } .fg-darkwhite-5{color:#8fa7 }   .bg-white{background-color:#00BCD4} .bg-lightwhite{background-color:#1bd7ef } .bg-lightwhite-1{background-color:#9c5dd } .bg-lightwhite-2{background-color:#12cee6 } .bg-lightwhite-3{background-color:#1bd7ef } .bg-lightwhite-4{background-color:#24e0f8 } .bg-lightwhite-5{background-color:#2de9ff }  .bg-white{background-color:#00BCD4} .bg-darkwhite{background-color:#1bd7ef } .bg-darkwhite-1{background-color:#b3cb } .bg-darkwhite-2{background-color:#aac2 } .bg-darkwhite-3{background-color:#a1b9 } .bg-darkwhite-4{background-color:#98b0 } .bg-darkwhite-5{background-color:#8fa7 }   .border-white{border-color:#00BCD4} .border-lightwhite{border-color:#1bd7ef } .border-lightwhite-1{border-color:#9c5dd } .border-lightwhite-2{border-color:#12cee6 } .border-lightwhite-3{border-color:#1bd7ef } .border-lightwhite-4{border-color:#24e0f8 } .border-lightwhite-5{border-color:#2de9ff } .fg-black{color:#212121} .fg-black{color:#212121} .fg-lightblack{color:#3c3c3c } .fg-lightblack-1{color:#2a2a2a } .fg-lightblack-2{color:#333333 } .fg-lightblack-3{color:#3c3c3c } .fg-lightblack-4{color:#454545 } .fg-lightblack-5{color:#4e4e4e }  .fg-black{color:#212121} .fg-darkblack{color:#3c3c3c } .fg-darkblack-1{color:#181818 } .fg-darkblack-2{color:#f0f0f } .fg-darkblack-3{color:#60606 } .fg-darkblack-4{color:#0 } .fg-darkblack-5{color:#0 }   .bg-black{background-color:#212121} .bg-lightblack{background-color:#3c3c3c } .bg-lightblack-1{background-color:#2a2a2a } .bg-lightblack-2{background-color:#333333 } .bg-lightblack-3{background-color:#3c3c3c } .bg-lightblack-4{background-color:#454545 } .bg-lightblack-5{background-color:#4e4e4e }  .bg-black{background-color:#212121} .bg-darkblack{background-color:#3c3c3c } .bg-darkblack-1{background-color:#181818 } .bg-darkblack-2{background-color:#f0f0f } .bg-darkblack-3{background-color:#60606 } .bg-darkblack-4{background-color:#0 } .bg-darkblack-5{background-color:#0 }   .border-black{border-color:#212121} .border-lightblack{border-color:#3c3c3c } .border-lightblack-1{border-color:#2a2a2a } .border-lightblack-2{border-color:#333333 } .border-lightblack-3{border-color:#3c3c3c } .border-lightblack-4{border-color:#454545 } .border-lightblack-5{border-color:#4e4e4e } .fg-gray{color:#78909C} .fg-gray{color:#78909C} .fg-lightgray{color:#93abb7 } .fg-lightgray-1{color:#8199a5 } .fg-lightgray-2{color:#8aa2ae } .fg-lightgray-3{color:#93abb7 } .fg-lightgray-4{color:#9cb4c0 } .fg-lightgray-5{color:#a5bdc9 }  .fg-gray{color:#78909C} .fg-darkgray{color:#93abb7 } .fg-darkgray-1{color:#6f8793 } .fg-darkgray-2{color:#667e8a } .fg-darkgray-3{color:#5d7581 } .fg-darkgray-4{color:#546c78 } .fg-darkgray-5{color:#4b636f }   .bg-gray{background-color:#78909C} .bg-lightgray{background-color:#93abb7 } .bg-lightgray-1{background-color:#8199a5 } .bg-lightgray-2{background-color:#8aa2ae } .bg-lightgray-3{background-color:#93abb7 } .bg-lightgray-4{background-color:#9cb4c0 } .bg-lightgray-5{background-color:#a5bdc9 }  .bg-gray{background-color:#78909C} .bg-darkgray{background-color:#93abb7 } .bg-darkgray-1{background-color:#6f8793 } .bg-darkgray-2{background-color:#667e8a } .bg-darkgray-3{background-color:#5d7581 } .bg-darkgray-4{background-color:#546c78 } .bg-darkgray-5{background-color:#4b636f }   .border-gray{border-color:#78909C} .border-lightgray{border-color:#93abb7 } .border-lightgray-1{border-color:#8199a5 } .border-lightgray-2{border-color:#8aa2ae } .border-lightgray-3{border-color:#93abb7 } .border-lightgray-4{border-color:#9cb4c0 } .border-lightgray-5{border-color:#a5bdc9 } 
+
+/*<modules/loader>*/
+
+
+/*<containers/grid>*/
+.col{display:inline-block;padding:0px;text-align:center;margin:0px;vertical-align:middle;height:100%}.row-1,.row-2,.row-3,.row-4,.row-5,.row-6,.row-7,.row-8,.row-9,.row-10,.row-11,.row-12,.row-13,.row-14,.row-15,.row-16,.row-17,.row-18,.row-19,.row-20{display:block;padding:0px;margin:0px;white-space:nowrap}.row-1 > .col,.col-1{min-width:100%;max-width:100%}.row-2 > .col,.col-2{min-width:50%;max-width:50%}.row-3 > .col,.col-3{min-width:33.333333333333336%;max-width:33.333333333333336%}.row-4 > .col,.col-4{min-width:25%;max-width:25%}.row-5 > .col,.col-5{min-width:20%;max-width:20%}.row-6 > .col,.col-6{min-width:16.666666666666668%;max-width:16.666666666666668%}.row-7 > .col,.col-7{min-width:14.285714285714286%;max-width:14.285714285714286%}.row-8 > .col,.col-8{min-width:12.5%;max-width:12.5%}.row-9 > .col,.col-9{min-width:11.11111111111111%;max-width:11.11111111111111%}.row-10 > .col,.col-10{min-width:10%;max-width:10%}.row-11 > .col,.col-11{min-width:9.090909090909092%;max-width:9.090909090909092%}.row-12 > .col,.col-12{min-width:8.333333333333334%;max-width:8.333333333333334%}.row-13 > .col,.col-13{min-width:7.6923076923076925%;max-width:7.6923076923076925%}.row-14 > .col,.col-14{min-width:7.142857142857143%;max-width:7.142857142857143%}
+
+/*<containers/layers>*/
+.layers{position:relative;z-index:0;display:block}.layer,.layer-0,.layer-1,.layer-2,.layer-3,.layer-4,.layer-5,.layer-6,.layer-7,.layer-8,.layer-9,.layer-10{position:absolute;top:0px;left:0px;right:0px;bottom:0px;margin:auto;width:100%;height:100%;z-index:0}.layer-1{z-index:1}.layer-2{z-index:2}.layer-3{z-index:3}.layer-4{z-index:4}.layer-5{z-index:5}.layer-6{z-index:6}.layer-7{z-index:7}.layer-8{z-index:8}.layer-9{z-index:9}.layer-10{z-index:10}
+
+/*<containers/mount>*/
+.mount{position:absolute}.mount-top{position:absolute;top:0px}.mount-left{position:absolute;left:0px}.mount-bottom{position:absolute;bottom:0px}.mount-right{position:absolute;right:0px}.mount-fill{position:absolute;top:0px;left:0px;bottom:0px;right:0px;height:100%;width:100%;margin:auto}.frame{position:relative;display:block;width:100%;height:100%} .mount.fixed,.mount-top.fixed,.mount-bottom.fixed,.mount-left.fixed,.mount-right.fixed{position:fixed}
+
+/*<options/float>*/
+.float{position:absolute}.float.left{left:0px}.float.right{right:0px}.float.top{top:0px}.float.bottom{bottom:0px}
+
+/*<options/scroll>*/
+/*---title:Scrollsection:Options---Add a shadow to your element. ```example<a class="shadow button">Spooky scary drop shadows!</a>```.scroll{overflow:auto}.scroll-x{overflow-x:auto}.scroll-y{overflow-y:auto}
+
+/*<options/shadow>*/
+.text.shadow{text-shadow:0px 1px 3px rgba(0,0,0,0.5)}.shadow{box-shadow:0px 1px 2px rgba(0,0,0,0.3)}.text.shadow{box-shadow:none;text-shadow:0px 1px 2px rgba(0,0,0,0.3)}
+
+/*<options/stretch>*/
+.stretch{margin:0;top:0px;right:0px;left:0px;bottom:0px}.stretch-horizontal,.stretch-x{margin:0;left:0px;right:0px}.stretch-vertical,.stretch-y{margin:0;top:0px;bottom:0px}

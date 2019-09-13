@@ -1,0 +1,94 @@
+/*---
+title: Grid
+section: Containers
+---
+Grids help us create tables without creating tables. Fun!
+```html
+<div class="grid">
+    <div class="row">
+        <div class="col">Testing...</div>
+        <div class="col">Check, Check.</div>
+    </div>
+</div> 
+```example
+<div class="grid">
+    <div class="row">
+        <div class="col">Testing...</div>
+        <div class="col">Check, Check.</div>
+    </div>
+</div>
+```
+Grids help us create tables without creating tables. Fun!
+```html
+<div class="grid">
+    <div class="row">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Some more stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+</div>
+```
+```example
+<div class="grid">
+    <div class="row-3">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Some more stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+    <div class="row-2">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+</div>
+```
+*/ 
+
+
+
+
+.col {
+    display:inline-block; 
+    padding:0px;
+    text-align:center;
+    margin:0px;
+    vertical-align:middle; 
+    height:100%;
+}
+
+.row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10, .row-11, .row-12, .row-13, .row-14, .row-15, .row-16, .row-17, .row-18, .row-19, .row-20 {
+    display:block; 
+    padding:0px;
+    margin:0px;
+    white-space:nowrap; 
+}
+
+
+.row-1 > .col, .col-1 {min-width:100%; max-width:100%;}
+
+.row-2 > .col, .col-2 {min-width:50%; max-width:50%;}
+
+.row-3 > .col, .col-3 {min-width:33.333333333333336%; max-width:33.333333333333336%;}
+
+.row-4 > .col, .col-4 {min-width:25%; max-width:25%;}
+
+.row-5 > .col, .col-5 {min-width:20%; max-width:20%;}
+
+.row-6 > .col, .col-6 {min-width:16.666666666666668%; max-width:16.666666666666668%;}
+
+.row-7 > .col, .col-7 {min-width:14.285714285714286%; max-width:14.285714285714286%;}
+
+.row-8 > .col, .col-8 {min-width:12.5%; max-width:12.5%;}
+
+.row-9 > .col, .col-9 {min-width:11.11111111111111%; max-width:11.11111111111111%;}
+
+.row-10 > .col, .col-10 {min-width:10%; max-width:10%;}
+
+.row-11 > .col, .col-11 {min-width:9.090909090909092%; max-width:9.090909090909092%;}
+
+.row-12 > .col, .col-12 {min-width:8.333333333333334%; max-width:8.333333333333334%;}
+
+.row-13 > .col, .col-13 {min-width:7.6923076923076925%; max-width:7.6923076923076925%;}
+
+.row-14 > .col, .col-14 {min-width:7.142857142857143%; max-width:7.142857142857143%;}
+
+ 

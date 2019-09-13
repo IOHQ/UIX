@@ -1,0 +1,68 @@
+/*---
+title: Grid
+section: Containers
+---
+Grids help us create tables without creating tables. Fun!
+```html
+<div class="grid">
+    <div class="row">
+        <div class="col">Testing...</div>
+        <div class="col">Check, Check.</div>
+    </div>
+</div> 
+```example
+<div class="grid">
+    <div class="row">
+        <div class="col">Testing...</div>
+        <div class="col">Check, Check.</div>
+    </div>
+</div>
+```
+Grids help us create tables without creating tables. Fun!
+```html
+<div class="grid">
+    <div class="row">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Some more stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+</div>
+```
+```example
+<div class="grid">
+    <div class="row-3">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Some more stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+    <div class="row-2">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+</div>
+```
+*/ 
+
+<* var rows = []; for(var x=1; x<21; x++) rows.push('.row-' + x); *>
+<* var cols = []; for(var x=1; x<21; x++) cols.push('.col-' + x); *>
+
+.col {
+    display:inline-block; 
+    padding:0px;
+    text-align:center;
+    margin:0px;
+    vertical-align:middle; 
+    height:100%;
+}
+
+<*=rows.join(', ')*> {
+    display:block; 
+    padding:0px;
+    margin:0px;
+    white-space:nowrap; 
+}
+
+<* for(var x=1; x<15; x++) { *>
+.row-<*=x*> > .col, .col-<*=x*> {min-width:<*=parseFloat(eval(100/x))*>%; max-width:<*=parseFloat(eval(100/x))*>%;}
+<* } *>
+ 

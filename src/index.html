@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$.UIX</title>
+    <link rel="stylesheet" href="$.css">
+    <script src="$.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="docs/css/style.css"> 
+  </head>
+  <body> 
+  
+    
+  
+    <script>
+    window.items = [{"id":"introduction","title":"Introduction","sections":[{"id":"introduction_about-or-yes-its-lessigreateranotherlessigreater-frontend-framework","title":"About | Yes, it's <i>another</i> frontend framework.","content":"<p>I know what you&#39;re thinking, <q>We have <b>plenty</b> of these already, bro.</q>. Here me out though, because this framework focuses on some niche points that others don&#39;t - standards!</p>\n<p>This framework is designed in a way that rather you&#39;re making a portfolio, company website, product page or full web application, themes can be switched out so that no matter the purpose, changing things up can be as easy as changing a link tag!</p>\n"}]},{"id":"classes","title":"Classes","sections":[{"id":"classes_text","title":".text","content":"<p>The <code>text</code> helps define where text is on the page. Elements that contain only text should have this class assigned.</p>\n<div class=\"example clearfix\"><h1 class=\"text\">Lorem Ipsum</h1>\n<p class=\"text\">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h1>\n​</div>\n\n<pre class=\"hljs\"><code class=\"lang-html\">&lt;h1 class=\"text\"&gt;Lo<span class=\"hljs-comment\">rem Ipsum&lt;/h1&gt;</span>\n&lt;p class=\"text\"&gt;Contrary to popular belief, Lo<span class=\"hljs-comment\">rem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&lt;/h1&gt;</span>\n​\n</code></pre>\n"}]},{"id":"colors","title":"Colors","sections":[{"id":"colors_introduction","title":"Introduction","content":"<p>Colors give us soft colors to use when an element needs to have certain coloring regardless of the theme.</p>\n<p>These are intended only to be used in cases where an element needs to disregard an applied theme.</p>\n<pre class=\"hljs\"><code class=\"lang-html\">    &lt;span <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"text fg-red\"</span>&gt;This <span class=\"hljs-type\">text</span> <span class=\"hljs-keyword\">is</span> red!&lt;/span&gt;\n    &lt;span <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"button bg-black fg-purple\"</span>&gt;This button <span class=\"hljs-keyword\">is</span> black <span class=\"hljs-keyword\">with</span> purple <span class=\"hljs-type\">text</span>!&lt;/span&gt;\n</code></pre>\n<div class=\"example clearfix\">    <span class=\"text fg-red\">This text is red!</span>\n    <span class=\"button bg-black fg-purple\">This button is black with purple text!</span>\n</div>\n\n<p>Each color additionally has 10 light and dark versions to adjust to.</p>\n<pre class=\"hljs\"><code class=\"lang-html\">\n\n<span class=\"xml\">    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkpurple-1 fg-lightpurple-1\"</span>&gt;</span> bg-darkpurple1 fg-lightpurple-1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkpurple-2 fg-lightpurple-2\"</span>&gt;</span> bg-darkpurple2 fg-lightpurple-2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkpurple-3 fg-lightpurple-3\"</span>&gt;</span> bg-darkpurple3 fg-lightpurple-3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkpurple-4 fg-lightpurple-4\"</span>&gt;</span> bg-darkpurple4 fg-lightpurple-4<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkpurple-5 fg-lightpurple-5\"</span>&gt;</span> bg-darkpurple5 fg-lightpurple-5<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkorange-1 fg-lightorange-1\"</span>&gt;</span> bg-darkorange1 fg-lightorange-1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkorange-2 fg-lightorange-2\"</span>&gt;</span> bg-darkorange2 fg-lightorange-2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkorange-3 fg-lightorange-3\"</span>&gt;</span> bg-darkorange3 fg-lightorange-3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkorange-4 fg-lightorange-4\"</span>&gt;</span> bg-darkorange4 fg-lightorange-4<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"button bg-darkorange-5 fg-lightorange-5\"</span>&gt;</span> bg-darkorange5 fg-lightorange-5<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span>\n\n</span>\n</code></pre>\n<div class=\"example clearfix\"> \n\n    <span class=\"button bg-darkpurple-1 fg-lightpurple-1\"> bg-darkpurple1 fg-lightpurple-1</span>\n\n    <span class=\"button bg-darkpurple-2 fg-lightpurple-2\"> bg-darkpurple2 fg-lightpurple-2</span>\n\n    <span class=\"button bg-darkpurple-3 fg-lightpurple-3\"> bg-darkpurple3 fg-lightpurple-3</span>\n\n    <span class=\"button bg-darkpurple-4 fg-lightpurple-4\"> bg-darkpurple4 fg-lightpurple-4</span>\n\n    <span class=\"button bg-darkpurple-5 fg-lightpurple-5\"> bg-darkpurple5 fg-lightpurple-5</span>\n\n\n\n    <span class=\"button bg-darkorange-1 fg-lightorange-1\"> bg-darkorange1 fg-lightorange-1</span>\n\n    <span class=\"button bg-darkorange-2 fg-lightorange-2\"> bg-darkorange2 fg-lightorange-2</span>\n\n    <span class=\"button bg-darkorange-3 fg-lightorange-3\"> bg-darkorange3 fg-lightorange-3</span>\n\n    <span class=\"button bg-darkorange-4 fg-lightorange-4\"> bg-darkorange4 fg-lightorange-4</span>\n\n    <span class=\"button bg-darkorange-5 fg-lightorange-5\"> bg-darkorange5 fg-lightorange-5</span>\n\n\n</div>\n\n"}]},{"id":"containers","title":"Containers","sections":[{"id":"containers_grid","title":"Grid","content":"<p>Grids help us create tables without creating tables. Fun!</p>\n<pre class=\"hljs\"><code class=\"lang-html\">&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"grid\"</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"row\"</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Testing...&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Check, Check.&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt; \n&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"example clearfix\"</span>&gt;&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"grid\"</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"row\"</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Testing...&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Check, Check.&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt;\nGrids help us create tables <span class=\"hljs-keyword\">without</span> creating tables. Fun!\n```html\n&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"grid\"</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"row\"</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;This <span class=\"hljs-keyword\">is</span> <span class=\"hljs-keyword\">some</span> stuff.&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Some more stuff.&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"col\"</span>&gt;Even &lt;b&gt;more&lt;/b&gt; stuff!&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n</code></pre>\n<div class=\"example clearfix\"><div class=\"grid\">\n    <div class=\"row-3\">\n        <div class=\"col\">This is some stuff.</div>\n        <div class=\"col\">Some more stuff.</div>\n        <div class=\"col\">Even <b>more</b> stuff!</div>\n    </div>\n    <div class=\"row-2\">\n        <div class=\"col\">This is some stuff.</div>\n        <div class=\"col\">Even <b>more</b> stuff!</div>\n    </div>\n</div>\n</div>\n"},{"id":"containers_layers","title":"Layers","content":"<p>We can use layers to stack images or other content on top of each other.</p>\n<pre class=\"hljs\"><code class=\"lang-html\">&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"layers\"</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"layer-1\"</span> style=<span class=\"hljs-string\">\"background:red\"</span>&gt;&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"layer-2\"</span>&gt;Some <span class=\"hljs-type\">text</span>.&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"layer-3\"</span> style=<span class=\"hljs-string\">\"background:rgba(255,255,255,0.5);\"</span>&gt;&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n</code></pre>\n<div class=\"example clearfix\"><div class=\"layers\" style=\"height:200px; width:200px;\">\n    <div class=\"layer-1\" style=\"background:red\"></div>\n    <div class=\"layer-2\" style=\"filter:blur(1.5px)\">Some blurred text.</div>\n    <div class=\"layer-3\" style=\"height:50%;background:rgba(100,225,255,0.3);\"></div>\n    <div class=\"layer-4\" style=\"font-size:14pt\">Not blurred text.</div>\n</div>\n</div>\n"},{"id":"containers_mount","title":"Mount","content":"<p>Mounts give us more flexibility when we need things to in non-responsive positions on the screen.</p>\n<pre class=\"hljs\"><code class=\"lang-html\"> &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"mount top right\"</span> style=<span class=\"hljs-string\">\"width:100px; height:100px;\"</span>&gt;\n    &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"frame\"</span>&gt;\n        &lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"float bottom left\"</span> style=<span class=\"hljs-string\">\"width:35px; height:35px;\"</span>&gt;\n            Hello!\n        &lt;/<span class=\"hljs-keyword\">div</span>&gt;\n    &lt;/<span class=\"hljs-keyword\">div</span>&gt;\n&lt;/<span class=\"hljs-keyword\">div</span>&gt; \n</code></pre>\n<div class=\"example clearfix\"><div style=\"width:250px; height:150px; position:relative;\">\n    <div class=\"mount top right\" style=\"width:100px; height:100px;\">\n        <div class=\"frame\">\n            <div class=\"float bottom left\" style=\"width:35px; height:35px;\">\n                Hello!\n            </div>\n        </div>\n    </div> \n</div>\n</div>\n"}]},{"id":"elements","title":"Elements","sections":[{"id":"elements_buttons","title":"Buttons","content":"<p>Create a button.</p>\n<pre class=\"hljs\"><code class=\"lang-html\">&lt;a <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"button\"</span>&gt;Click <span class=\"hljs-keyword\">me</span>!&lt;/a&gt;\n</code></pre>\n"},{"id":"elements_h1-h6","title":"h1 - h6","content":"<p>We stick to traditional headings for search engine optimization. Sometimes its best not to change things that work.</p>\n<pre class=\"hljs\"><code class=\"lang-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h1</span>&gt;</span>Heading 1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h1</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h2</span>&gt;</span>Heading 2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h2</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h3</span>&gt;</span>Heading 3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h3</span>&gt;</span>\n</code></pre>\n<div class=\"example clearfix\"><h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n</div>\n"}]},{"id":"grammar","title":"Grammar","sections":[{"id":"grammar_dollarcamel","title":"$.camel","content":"<p>Convert some text to CamelCase.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>camel(<span class=\"hljs-string\">\"My Name Is Paul!\"</span>); \n</code></pre>\n"},{"id":"grammar_dollarcapitalize","title":"$.capitalize","content":"<p>Capitalize the first letter of a string.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-variable\">$.</span>capitalize(<span class=\"hljs-string\">\"hello!\"</span>);\n</code></pre>\n"},{"id":"grammar_dollargetalphanumeric","title":"$.getAlphaNumeric","content":"<p>Return only alpha-numeric characters.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>getAlphaNumeric(<span class=\"hljs-string\">\"Walter JR. is 17 years old.\"</span>);\n</code></pre>\n"},{"id":"grammar_dollargetletters","title":"$.getLetters","content":"<p>Return only alphabetical characters.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>getLetters(<span class=\"hljs-string\">\"WalterJRisyearsold\"</span>); \n</code></pre>\n"},{"id":"grammar_dollargetnumbers","title":"$.getNumbers","content":"<p>Return only alpha-numeric characters.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>getNumbers(<span class=\"hljs-string\">\"Walter JR. is 17 years old.\"</span>); \n</code></pre>\n"},{"id":"grammar_dollarlower","title":"$.lower","content":"<p>Convert a string to lowercase.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>lower(<span class=\"hljs-string\">\"HELLO!\"</span>); \n</code></pre>\n"},{"id":"grammar_dollarupper","title":"$.upper","content":"<p>Convert a string to uppercase.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable\">$.</span>upper(<span class=\"hljs-string\">\"hello!\"</span>); \n</code></pre>\n"}]},{"id":"modules","title":"Modules","sections":[{"id":"modules_js-introduction","title":"JS Introduction","content":"<p>Modules define web components.</p>\n"},{"id":"modules_css-introduction","title":"CSS Introduction","content":"<p>Modules define web components.</p>\n"},{"id":"modules_loader","title":".loader","content":"<p>Modules define web components.</p>\n<pre class=\"hljs\"><code class=\"lang-html\">&lt;<span class=\"hljs-keyword\">div</span> <span class=\"hljs-type\">class</span>=<span class=\"hljs-string\">\"loader module\"</span>&gt;&lt;/<span class=\"hljs-keyword\">div</span>&gt;\n</code></pre>\n"}]},{"id":"options","title":"Options","sections":[{"id":"options_scroll","title":"Scroll","content":"<p>Add a shadow to your element.</p>\n<div class=\"example clearfix\"><a class=\"shadow button\">Spooky scary drop shadows!</a>\n</div>\n\n<p>.scroll {\n    overflow:auto;\n}\n.scroll-x {\n    overflow-x:auto;\n}\n.scroll-y {\n    overflow-y:auto;\n}\n/*---\ntitle: Shadow</p>\n<h2 id=\"section-options\">section: Options</h2>\n<p>Add a shadow to your element.</p>\n<div class=\"example clearfix\"><a class=\"shadow button\">Spooky scary drop shadows!</a>\n</div>\n\n\n"},{"id":"options_stretch","title":"Stretch","content":"<p>Stretch an element to fill the screen.</p>\n<div class=\"example clearfix\"><a class=\"button stretch horizontal\">They call me armstrong. Stretch, armstrong.</a>\n<a class=\"button stretch y\">They call me armstrong. Stretch, armstrong.</a>\n</div>\n\n\n"}]},{"id":"tools","title":"Tools","sections":[{"id":"tools_dollarcopy","title":"$.copy","content":"<p>Create a copy of an object.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\">var MyObject = { <span class=\"hljs-string\">\"a\"</span>: <span class=\"hljs-number\">1</span> };\nvar NewObject = $.<span class=\"hljs-keyword\">copy</span>(MyObject);\nNewObject.a++;\n\n<span class=\"hljs-keyword\">return</span> JSON.stringify(<span class=\"hljs-variable\">$log</span>(MyObject), <span class=\"hljs-literal\">false</span> ,<span class=\"hljs-number\">2</span>);\n</code></pre>\n"},{"id":"tools_dollarlogging","title":"$.logging","content":"<p>Enable a function-specific logging function.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\">var <span class=\"hljs-variable\">$log</span> = $.logging(<span class=\"hljs-string\">'My Category'</span>);\n<span class=\"hljs-variable\">$log</span>(<span class=\"hljs-string\">\"Hello world!\"</span>);\n</code></pre>\n<p>When passing multiple arguments, the console will create a group of the arguments prefixed by their type.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\">// Post a simple log.\n<span class=\"hljs-keyword\">function</span> MyFirstFunction(){\n    var <span class=\"hljs-variable\">$log</span> = $.logging(<span class=\"hljs-string\">'MyFirstFunction'</span>);\n    <span class=\"hljs-variable\">$log</span>(<span class=\"hljs-string\">'1+2 is '</span> + (<span class=\"hljs-number\">1</span>+<span class=\"hljs-number\">2</span>));\n}\n\n// Log something <span class=\"hljs-keyword\">in</span> groups.\n<span class=\"hljs-keyword\">function</span> mySecondFunction(){\n    var <span class=\"hljs-variable\">$log</span> = $.logging(<span class=\"hljs-string\">'mySecondFunction'</span>);\n    <span class=\"hljs-variable\">$log</span>(<span class=\"hljs-string\">'1+1 is:'</span>, {answer:<span class=\"hljs-number\">1</span>+<span class=\"hljs-number\">1</span>}, <span class=\"hljs-string\">'but it is not: '</span> + (<span class=\"hljs-number\">2</span>+<span class=\"hljs-number\">2</span>));\n}\n\nMyFirstFunction();\nmySecondFunction();\n</code></pre>\n"},{"id":"tools_dollartype","title":"$.type","content":"<p>Get specific details on some data.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\">$.<span class=\"hljs-keyword\">type</span>(<span class=\"hljs-number\">5</span>.<span class=\"hljs-number\">2</span>);\n//  <span class=\"hljs-literal\">result</span> -&gt; {<span class=\"hljs-keyword\">type</span>: <span class=\"hljs-string\">\"float\"</span>, native: <span class=\"hljs-string\">\"number\"</span>, isNumber: <span class=\"hljs-literal\">true</span>, isFloat: <span class=\"hljs-literal\">true</span>, isOdd: <span class=\"hljs-literal\">true</span>}\n</code></pre>\n"},{"id":"tools_dollaruid","title":"$.uid","content":"<p>Generate a unique identifier.</p>\n<pre class=\"hljs\"><code class=\"lang-javascript\">$.uid();\n//  <span class=\"hljs-literal\">result</span> -&gt; {<span class=\"hljs-keyword\">type</span>: <span class=\"hljs-string\">\"float\"</span>, native: <span class=\"hljs-string\">\"number\"</span>, isNumber: <span class=\"hljs-literal\">true</span>, isFloat: <span class=\"hljs-literal\">true</span>, isOdd: <span class=\"hljs-literal\">true</span>}\n</code></pre>\n"}]},{"id":"views","title":"Views","sections":[{"id":"views_js-introduction","title":"JS Introduction","content":"<p>Views are template-enabled components that can be passed content and style options.</p>\n"}]}]    </script>
+  
+    <nav class="fixed mount-top mount-right stretch-y scroll">  
+    
+      <div class="search">
+         <input placeholder="Search..." /> 
+      </div>
+    
+      <ul>
+      
+        <li>
+          <a href="#introduction" class="link item" data-title="Introduction" data-description="">Introduction</a>
+          <ul>
+          
+            <li>
+                <a href="#introduction_about-or-yes-its-lessigreateranotherlessigreater-frontend-framework" class="link item" data-title="About | Yes, it&#39;s &lt;i&gt;another&lt;/i&gt; frontend framework." data-description="">About </a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#classes" class="link item" data-title="Classes" data-description="">Classes</a>
+          <ul>
+          
+            <li>
+                <a href="#classes_text" class="link item" data-title=".text" data-description="">.text</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#colors" class="link item" data-title="Colors" data-description="">Colors</a>
+          <ul>
+          
+            <li>
+                <a href="#colors_introduction" class="link item" data-title="Introduction" data-description="">Introduction</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#containers" class="link item" data-title="Containers" data-description="">Containers</a>
+          <ul>
+          
+            <li>
+                <a href="#containers_grid" class="link item" data-title="Grid" data-description="">Grid</a>
+            </li>
+        
+            <li>
+                <a href="#containers_layers" class="link item" data-title="Layers" data-description="">Layers</a>
+            </li>
+        
+            <li>
+                <a href="#containers_mount" class="link item" data-title="Mount" data-description="">Mount</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#elements" class="link item" data-title="Elements" data-description="">Elements</a>
+          <ul>
+          
+            <li>
+                <a href="#elements_buttons" class="link item" data-title="Buttons" data-description="">Buttons</a>
+            </li>
+        
+            <li>
+                <a href="#elements_h1-h6" class="link item" data-title="h1 - h6" data-description="">h1 - h6</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#grammar" class="link item" data-title="Grammar" data-description="">Grammar</a>
+          <ul>
+          
+            <li>
+                <a href="#grammar_dollarcamel" class="link item" data-title="$.camel" data-description="">$.camel</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollarcapitalize" class="link item" data-title="$.capitalize" data-description="">$.capitalize</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollargetalphanumeric" class="link item" data-title="$.getAlphaNumeric" data-description="">$.getAlphaNumeric</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollargetletters" class="link item" data-title="$.getLetters" data-description="">$.getLetters</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollargetnumbers" class="link item" data-title="$.getNumbers" data-description="">$.getNumbers</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollarlower" class="link item" data-title="$.lower" data-description="">$.lower</a>
+            </li>
+        
+            <li>
+                <a href="#grammar_dollarupper" class="link item" data-title="$.upper" data-description="">$.upper</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#modules" class="link item" data-title="Modules" data-description="">Modules</a>
+          <ul>
+          
+            <li>
+                <a href="#modules_js-introduction" class="link item" data-title="JS Introduction" data-description="">JS Introduction</a>
+            </li>
+        
+            <li>
+                <a href="#modules_css-introduction" class="link item" data-title="CSS Introduction" data-description="">CSS Introduction</a>
+            </li>
+        
+            <li>
+                <a href="#modules_loader" class="link item" data-title=".loader" data-description="">.loader</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#options" class="link item" data-title="Options" data-description="">Options</a>
+          <ul>
+          
+            <li>
+                <a href="#options_scroll" class="link item" data-title="Scroll" data-description="">Scroll</a>
+            </li>
+        
+            <li>
+                <a href="#options_stretch" class="link item" data-title="Stretch" data-description="">Stretch</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#tools" class="link item" data-title="Tools" data-description="">Tools</a>
+          <ul>
+          
+            <li>
+                <a href="#tools_dollarcopy" class="link item" data-title="$.copy" data-description="">$.copy</a>
+            </li>
+        
+            <li>
+                <a href="#tools_dollarlogging" class="link item" data-title="$.logging" data-description="">$.logging</a>
+            </li>
+        
+            <li>
+                <a href="#tools_dollartype" class="link item" data-title="$.type" data-description="">$.type</a>
+            </li>
+        
+            <li>
+                <a href="#tools_dollaruid" class="link item" data-title="$.uid" data-description="">$.uid</a>
+            </li>
+         
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#views" class="link item" data-title="Views" data-description="">Views</a>
+          <ul>
+          
+            <li>
+                <a href="#views_js-introduction" class="link item" data-title="JS Introduction" data-description="">JS Introduction</a>
+            </li>
+         
+          </ul>
+        </li>
+       
+      </ul>
+    </nav>
+    
+    <div class="fixed mount mount-top mount-left stretch">
+      <div class="layers stretch">
+        <div class="layer-1"></div>
+        <div class="layer-2"></div>     
+        <div class="layer-3"></div>     
+      </div>
+    </div>
+      
+    <main>
+    <header class="masthead">
+      <div class="frame">
+        <div class="content">
+          <h1>UIX Framework<span class="version">0.1</span></h1> 
+        </div>
+      </div>
+    </header>
+     
+     <div class="articles">
+      
+      <article class="b" id="introduction" data-title="Introduction" data-description="">
+        <header>
+          <h1>Introduction</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="introduction_about-or-yes-its-lessigreateranotherlessigreater-frontend-framework" data-title="About | Yes, it&#39;s &lt;i&gt;another&lt;/i&gt; frontend framework." data-description="">
+          <div class="content">
+            <h2> Yes, it's <i>another</i> frontend framework.</h2>
+            <p>I know what you&#39;re thinking, <q>We have <b>plenty</b> of these already, bro.</q>. Here me out though, because this framework focuses on some niche points that others don&#39;t - standards!</p>
+<p>This framework is designed in a way that rather you&#39;re making a portfolio, company website, product page or full web application, themes can be switched out so that no matter the purpose, changing things up can be as easy as changing a link tag!</p>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="a" id="classes" data-title="Classes" data-description="">
+        <header>
+          <h1>Classes</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="b" id="classes_text" data-title=".text" data-description="">
+          <div class="content">
+            <h2>.text</h2>
+            <p>The <code>text</code> helps define where text is on the page. Elements that contain only text should have this class assigned.</p>
+<div class="example clearfix"><h1 class="text">Lorem Ipsum</h1>
+<p class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h1>
+​</div>
+
+<pre class="hljs"><code class="lang-html">&lt;h1 class="text"&gt;Lo<span class="hljs-comment">rem Ipsum&lt;/h1&gt;</span>
+&lt;p class="text"&gt;Contrary to popular belief, Lo<span class="hljs-comment">rem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&lt;/h1&gt;</span>
+​
+</code></pre>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="colors" data-title="Colors" data-description="">
+        <header>
+          <h1>Colors</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="colors_introduction" data-title="Introduction" data-description="">
+          <div class="content">
+            <h2>Introduction</h2>
+            <p>Colors give us soft colors to use when an element needs to have certain coloring regardless of the theme.</p>
+<p>These are intended only to be used in cases where an element needs to disregard an applied theme.</p>
+<pre class="hljs"><code class="lang-html">    &lt;span <span class="hljs-type">class</span>=<span class="hljs-string">"text fg-red"</span>&gt;This <span class="hljs-type">text</span> <span class="hljs-keyword">is</span> red!&lt;/span&gt;
+    &lt;span <span class="hljs-type">class</span>=<span class="hljs-string">"button bg-black fg-purple"</span>&gt;This button <span class="hljs-keyword">is</span> black <span class="hljs-keyword">with</span> purple <span class="hljs-type">text</span>!&lt;/span&gt;
+</code></pre>
+<div class="example clearfix">    <span class="text fg-red">This text is red!</span>
+    <span class="button bg-black fg-purple">This button is black with purple text!</span>
+</div>
+
+<p>Each color additionally has 10 light and dark versions to adjust to.</p>
+<pre class="hljs"><code class="lang-html">
+
+<span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkpurple-1 fg-lightpurple-1"</span>&gt;</span> bg-darkpurple1 fg-lightpurple-1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkpurple-2 fg-lightpurple-2"</span>&gt;</span> bg-darkpurple2 fg-lightpurple-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkpurple-3 fg-lightpurple-3"</span>&gt;</span> bg-darkpurple3 fg-lightpurple-3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkpurple-4 fg-lightpurple-4"</span>&gt;</span> bg-darkpurple4 fg-lightpurple-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkpurple-5 fg-lightpurple-5"</span>&gt;</span> bg-darkpurple5 fg-lightpurple-5<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkorange-1 fg-lightorange-1"</span>&gt;</span> bg-darkorange1 fg-lightorange-1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkorange-2 fg-lightorange-2"</span>&gt;</span> bg-darkorange2 fg-lightorange-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkorange-3 fg-lightorange-3"</span>&gt;</span> bg-darkorange3 fg-lightorange-3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkorange-4 fg-lightorange-4"</span>&gt;</span> bg-darkorange4 fg-lightorange-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button bg-darkorange-5 fg-lightorange-5"</span>&gt;</span> bg-darkorange5 fg-lightorange-5<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+</span>
+</code></pre>
+<div class="example clearfix"> 
+
+    <span class="button bg-darkpurple-1 fg-lightpurple-1"> bg-darkpurple1 fg-lightpurple-1</span>
+
+    <span class="button bg-darkpurple-2 fg-lightpurple-2"> bg-darkpurple2 fg-lightpurple-2</span>
+
+    <span class="button bg-darkpurple-3 fg-lightpurple-3"> bg-darkpurple3 fg-lightpurple-3</span>
+
+    <span class="button bg-darkpurple-4 fg-lightpurple-4"> bg-darkpurple4 fg-lightpurple-4</span>
+
+    <span class="button bg-darkpurple-5 fg-lightpurple-5"> bg-darkpurple5 fg-lightpurple-5</span>
+
+
+
+    <span class="button bg-darkorange-1 fg-lightorange-1"> bg-darkorange1 fg-lightorange-1</span>
+
+    <span class="button bg-darkorange-2 fg-lightorange-2"> bg-darkorange2 fg-lightorange-2</span>
+
+    <span class="button bg-darkorange-3 fg-lightorange-3"> bg-darkorange3 fg-lightorange-3</span>
+
+    <span class="button bg-darkorange-4 fg-lightorange-4"> bg-darkorange4 fg-lightorange-4</span>
+
+    <span class="button bg-darkorange-5 fg-lightorange-5"> bg-darkorange5 fg-lightorange-5</span>
+
+
+</div>
+
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="a" id="containers" data-title="Containers" data-description="">
+        <header>
+          <h1>Containers</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="b" id="containers_grid" data-title="Grid" data-description="">
+          <div class="content">
+            <h2>Grid</h2>
+            <p>Grids help us create tables without creating tables. Fun!</p>
+<pre class="hljs"><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"grid"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"row"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Testing...&lt;/<span class="hljs-keyword">div</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Check, Check.&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt; 
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"example clearfix"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"grid"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"row"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Testing...&lt;/<span class="hljs-keyword">div</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Check, Check.&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+Grids help us create tables <span class="hljs-keyword">without</span> creating tables. Fun!
+```html
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"grid"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"row"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;This <span class="hljs-keyword">is</span> <span class="hljs-keyword">some</span> stuff.&lt;/<span class="hljs-keyword">div</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Some more stuff.&lt;/<span class="hljs-keyword">div</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"col"</span>&gt;Even &lt;b&gt;more&lt;/b&gt; stuff!&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<div class="example clearfix"><div class="grid">
+    <div class="row-3">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Some more stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+    <div class="row-2">
+        <div class="col">This is some stuff.</div>
+        <div class="col">Even <b>more</b> stuff!</div>
+    </div>
+</div>
+</div>
+          </div>
+        </section>
+      
+        <section class="a" id="containers_layers" data-title="Layers" data-description="">
+          <div class="content">
+            <h2>Layers</h2>
+            <p>We can use layers to stack images or other content on top of each other.</p>
+<pre class="hljs"><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"layers"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"layer-1"</span> style=<span class="hljs-string">"background:red"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"layer-2"</span>&gt;Some <span class="hljs-type">text</span>.&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"layer-3"</span> style=<span class="hljs-string">"background:rgba(255,255,255,0.5);"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<div class="example clearfix"><div class="layers" style="height:200px; width:200px;">
+    <div class="layer-1" style="background:red"></div>
+    <div class="layer-2" style="filter:blur(1.5px)">Some blurred text.</div>
+    <div class="layer-3" style="height:50%;background:rgba(100,225,255,0.3);"></div>
+    <div class="layer-4" style="font-size:14pt">Not blurred text.</div>
+</div>
+</div>
+          </div>
+        </section>
+      
+        <section class="b" id="containers_mount" data-title="Mount" data-description="">
+          <div class="content">
+            <h2>Mount</h2>
+            <p>Mounts give us more flexibility when we need things to in non-responsive positions on the screen.</p>
+<pre class="hljs"><code class="lang-html"> &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"mount top right"</span> style=<span class="hljs-string">"width:100px; height:100px;"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"frame"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"float bottom left"</span> style=<span class="hljs-string">"width:35px; height:35px;"</span>&gt;
+            Hello!
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt; 
+</code></pre>
+<div class="example clearfix"><div style="width:250px; height:150px; position:relative;">
+    <div class="mount top right" style="width:100px; height:100px;">
+        <div class="frame">
+            <div class="float bottom left" style="width:35px; height:35px;">
+                Hello!
+            </div>
+        </div>
+    </div> 
+</div>
+</div>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="elements" data-title="Elements" data-description="">
+        <header>
+          <h1>Elements</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="elements_buttons" data-title="Buttons" data-description="">
+          <div class="content">
+            <h2>Buttons</h2>
+            <p>Create a button.</p>
+<pre class="hljs"><code class="lang-html">&lt;a <span class="hljs-type">class</span>=<span class="hljs-string">"button"</span>&gt;Click <span class="hljs-keyword">me</span>!&lt;/a&gt;
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="elements_h1-h6" data-title="h1 - h6" data-description="">
+          <div class="content">
+            <h2>h1 - h6</h2>
+            <p>We stick to traditional headings for search engine optimization. Sometimes its best not to change things that work.</p>
+<pre class="hljs"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading 1<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Heading 2<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Heading 3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+</code></pre>
+<div class="example clearfix"><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+</div>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="grammar" data-title="Grammar" data-description="">
+        <header>
+          <h1>Grammar</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="grammar_dollarcamel" data-title="$.camel" data-description="">
+          <div class="content">
+            <h2>$.camel</h2>
+            <p>Convert some text to CamelCase.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>camel(<span class="hljs-string">"My Name Is Paul!"</span>); 
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="grammar_dollarcapitalize" data-title="$.capitalize" data-description="">
+          <div class="content">
+            <h2>$.capitalize</h2>
+            <p>Capitalize the first letter of a string.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-variable">$.</span>capitalize(<span class="hljs-string">"hello!"</span>);
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="a" id="grammar_dollargetalphanumeric" data-title="$.getAlphaNumeric" data-description="">
+          <div class="content">
+            <h2>$.getAlphaNumeric</h2>
+            <p>Return only alpha-numeric characters.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>getAlphaNumeric(<span class="hljs-string">"Walter JR. is 17 years old."</span>);
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="grammar_dollargetletters" data-title="$.getLetters" data-description="">
+          <div class="content">
+            <h2>$.getLetters</h2>
+            <p>Return only alphabetical characters.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>getLetters(<span class="hljs-string">"WalterJRisyearsold"</span>); 
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="a" id="grammar_dollargetnumbers" data-title="$.getNumbers" data-description="">
+          <div class="content">
+            <h2>$.getNumbers</h2>
+            <p>Return only alpha-numeric characters.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>getNumbers(<span class="hljs-string">"Walter JR. is 17 years old."</span>); 
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="grammar_dollarlower" data-title="$.lower" data-description="">
+          <div class="content">
+            <h2>$.lower</h2>
+            <p>Convert a string to lowercase.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>lower(<span class="hljs-string">"HELLO!"</span>); 
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="a" id="grammar_dollarupper" data-title="$.upper" data-description="">
+          <div class="content">
+            <h2>$.upper</h2>
+            <p>Convert a string to uppercase.</p>
+<pre class="hljs"><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-variable">$.</span>upper(<span class="hljs-string">"hello!"</span>); 
+</code></pre>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="a" id="modules" data-title="Modules" data-description="">
+        <header>
+          <h1>Modules</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="b" id="modules_js-introduction" data-title="JS Introduction" data-description="">
+          <div class="content">
+            <h2>JS Introduction</h2>
+            <p>Modules define web components.</p>
+          </div>
+        </section>
+      
+        <section class="a" id="modules_css-introduction" data-title="CSS Introduction" data-description="">
+          <div class="content">
+            <h2>CSS Introduction</h2>
+            <p>Modules define web components.</p>
+          </div>
+        </section>
+      
+        <section class="b" id="modules_loader" data-title=".loader" data-description="">
+          <div class="content">
+            <h2>.loader</h2>
+            <p>Modules define web components.</p>
+<pre class="hljs"><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader module"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="options" data-title="Options" data-description="">
+        <header>
+          <h1>Options</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="options_scroll" data-title="Scroll" data-description="">
+          <div class="content">
+            <h2>Scroll</h2>
+            <p>Add a shadow to your element.</p>
+<div class="example clearfix"><a class="shadow button">Spooky scary drop shadows!</a>
+</div>
+
+<p>.scroll {
+    overflow:auto;
+}
+.scroll-x {
+    overflow-x:auto;
+}
+.scroll-y {
+    overflow-y:auto;
+}
+/*---
+title: Shadow</p>
+<h2 id="section-options">section: Options</h2>
+<p>Add a shadow to your element.</p>
+<div class="example clearfix"><a class="shadow button">Spooky scary drop shadows!</a>
+</div>
+
+
+          </div>
+        </section>
+      
+        <section class="b" id="options_stretch" data-title="Stretch" data-description="">
+          <div class="content">
+            <h2>Stretch</h2>
+            <p>Stretch an element to fill the screen.</p>
+<div class="example clearfix"><a class="button stretch horizontal">They call me armstrong. Stretch, armstrong.</a>
+<a class="button stretch y">They call me armstrong. Stretch, armstrong.</a>
+</div>
+
+
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="tools" data-title="Tools" data-description="">
+        <header>
+          <h1>Tools</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="tools_dollarcopy" data-title="$.copy" data-description="">
+          <div class="content">
+            <h2>$.copy</h2>
+            <p>Create a copy of an object.</p>
+<pre class="hljs"><code class="lang-javascript">var MyObject = { <span class="hljs-string">"a"</span>: <span class="hljs-number">1</span> };
+var NewObject = $.<span class="hljs-keyword">copy</span>(MyObject);
+NewObject.a++;
+
+<span class="hljs-keyword">return</span> JSON.stringify(<span class="hljs-variable">$log</span>(MyObject), <span class="hljs-literal">false</span> ,<span class="hljs-number">2</span>);
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="tools_dollarlogging" data-title="$.logging" data-description="">
+          <div class="content">
+            <h2>$.logging</h2>
+            <p>Enable a function-specific logging function.</p>
+<pre class="hljs"><code class="lang-javascript">var <span class="hljs-variable">$log</span> = $.logging(<span class="hljs-string">'My Category'</span>);
+<span class="hljs-variable">$log</span>(<span class="hljs-string">"Hello world!"</span>);
+</code></pre>
+<p>When passing multiple arguments, the console will create a group of the arguments prefixed by their type.</p>
+<pre class="hljs"><code class="lang-javascript">// Post a simple log.
+<span class="hljs-keyword">function</span> MyFirstFunction(){
+    var <span class="hljs-variable">$log</span> = $.logging(<span class="hljs-string">'MyFirstFunction'</span>);
+    <span class="hljs-variable">$log</span>(<span class="hljs-string">'1+2 is '</span> + (<span class="hljs-number">1</span>+<span class="hljs-number">2</span>));
+}
+
+// Log something <span class="hljs-keyword">in</span> groups.
+<span class="hljs-keyword">function</span> mySecondFunction(){
+    var <span class="hljs-variable">$log</span> = $.logging(<span class="hljs-string">'mySecondFunction'</span>);
+    <span class="hljs-variable">$log</span>(<span class="hljs-string">'1+1 is:'</span>, {answer:<span class="hljs-number">1</span>+<span class="hljs-number">1</span>}, <span class="hljs-string">'but it is not: '</span> + (<span class="hljs-number">2</span>+<span class="hljs-number">2</span>));
+}
+
+MyFirstFunction();
+mySecondFunction();
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="a" id="tools_dollartype" data-title="$.type" data-description="">
+          <div class="content">
+            <h2>$.type</h2>
+            <p>Get specific details on some data.</p>
+<pre class="hljs"><code class="lang-javascript">$.<span class="hljs-keyword">type</span>(<span class="hljs-number">5</span>.<span class="hljs-number">2</span>);
+//  <span class="hljs-literal">result</span> -&gt; {<span class="hljs-keyword">type</span>: <span class="hljs-string">"float"</span>, native: <span class="hljs-string">"number"</span>, isNumber: <span class="hljs-literal">true</span>, isFloat: <span class="hljs-literal">true</span>, isOdd: <span class="hljs-literal">true</span>}
+</code></pre>
+          </div>
+        </section>
+      
+        <section class="b" id="tools_dollaruid" data-title="$.uid" data-description="">
+          <div class="content">
+            <h2>$.uid</h2>
+            <p>Generate a unique identifier.</p>
+<pre class="hljs"><code class="lang-javascript">$.uid();
+//  <span class="hljs-literal">result</span> -&gt; {<span class="hljs-keyword">type</span>: <span class="hljs-string">"float"</span>, native: <span class="hljs-string">"number"</span>, isNumber: <span class="hljs-literal">true</span>, isFloat: <span class="hljs-literal">true</span>, isOdd: <span class="hljs-literal">true</span>}
+</code></pre>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+      
+      <article class="b" id="views" data-title="Views" data-description="">
+        <header>
+          <h1>Views</h1>
+                  </header> 
+        <div class="sections">
+        
+        <section class="a" id="views_js-introduction" data-title="JS Introduction" data-description="">
+          <div class="content">
+            <h2>JS Introduction</h2>
+            <p>Views are template-enabled components that can be passed content and style options.</p>
+          </div>
+        </section>
+       
+        </div>
+      </article>
+      <br>
+       
+    </div>
+      
+    <footer>
+      <div class="row-2">
+        <div class="col">
+          <div class="row-2">
+            <div class="col">
+              <ul>
+                <li>About</li>
+                <li>Themes</li>
+                <li>Showcase</li>
+                <li>License</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li>Donate</li> 
+                <li>Support</li> 
+                <li>Support</li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+          <div class="col">
+            <article>
+            <p>Sponsored by <a href="https://iohq.org">IOHQ.</a></p>
+            </article>
+          </div>
+      </div>
+    </footer>
+    </main> 
+     
+    <script src="docs/js/script.js"></script>
+    
+  </body>
+</html>

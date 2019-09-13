@@ -1,0 +1,86 @@
+/*---
+title: Mount
+section: Containers
+---
+Mounts give us more flexibility when we need things to in non-responsive positions on the screen.
+
+```html
+ <div class="mount top right" style="width:100px; height:100px;">
+    <div class="frame">
+        <div class="float bottom left" style="width:35px; height:35px;">
+            Hello!
+        </div>
+    </div>
+</div> 
+```
+```example
+<div style="width:250px; height:150px; position:relative;">
+    <div class="mount top right" style="width:100px; height:100px;">
+        <div class="frame">
+            <div class="float bottom left" style="width:35px; height:35px;">
+                Hello!
+            </div>
+        </div>
+    </div> 
+</div>
+```
+*/ 
+
+
+.mount {
+    position:absolute;
+    
+}
+
+.mount-top {
+    position:absolute;
+    
+    top:0px; 
+}
+
+.mount-left {
+    position:absolute;
+    
+    left:0px;
+}
+
+.mount-bottom {
+    position:absolute;
+    
+    bottom:0px; 
+}
+
+.mount-right {
+    position:absolute;
+    
+    right:0px;
+}
+
+.mount-fill {
+    position:absolute;
+    
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    height:100%;
+    width:100%;
+    margin:auto;
+}
+
+.frame {
+    position:relative;
+    display:block;
+    width:100%;
+    height:100%;
+} 
+
+
+.mount.fixed,
+.mount-top.fixed,
+.mount-bottom.fixed,
+.mount-left.fixed,
+.mount-right.fixed
+{
+    position:fixed;
+}

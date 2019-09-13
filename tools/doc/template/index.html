@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="$.css">
+    <script src="$.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="docs/css/style.css"> 
+  </head>
+  <body> 
+  
+    <%
+    function compare(a,b) {
+      if (a.title < b.title)
+         return -1;
+      if (a.title > b.title)
+        return 1;
+      return 0;
+    }
+
+    var presorted_items = [];
+    for (var item_name in items) {
+      var item = items[item_name];
+      var sections = [], levels = {"1": [], "2": []};
+      for(var section_name in item.sections){
+       if (/intro/i.test(item.sections[section_name].id)) 
+          levels["1"].push(item.sections[section_name]);
+        else 
+          levels["2"].push(item.sections[section_name]);
+      }
+      levels["2"].sort(compare);
+      for(var each in levels) {
+        levels[each].forEach(function(item){sections.push(item);  });
+      }
+      item.sections = sections;
+      presorted_items.push(item);
+    }
+    
+    
+    presorted_items.sort(compare);
+    var levels = {"1": [], "2": [], "3": []};
+    for(var each in presorted_items) {
+      var item = presorted_items[each];
+      if (/intro/i.test(item.title)) levels["1"].push(item);
+      else levels["2"].push(item);
+    }
+    var sorted_items = [];
+    for(var each in levels) levels[each].forEach(function(i){
+      sorted_items.push(i);
+    });
+    %>
+  
+    <script>
+    window.items = <%-JSON.stringify(sorted_items)-%>
+    </script>
+  
+    <nav class="fixed mount-top mount-right stretch-y scroll">  
+    
+      <div class="search">
+         <input placeholder="Search..." /> 
+      </div>
+    
+      <ul>
+      <% for (item_name in sorted_items) { var item = sorted_items[item_name]; var item_title = item.title; if (item.title.split('|')[1]) item_title = item.title.split('|')[0]; %>
+        <li>
+          <a href="#<%= item.id %>" class="link item" data-title="<%= item_title %>" data-description="<%= item.resume %>"><%= item_title %></a>
+          <ul>
+          <% for (section_name in item.sections){ var section = item.sections[section_name];var section_title = section.title; if (section.title.split('|')[1]) section_title = section.title.split('|')[0];   %>
+            <li>
+                <a href="#<%= section.id %>" class="link item" data-title="<%= section.title -%>" data-description="<%= section.resume %>"><%= section_title %></a>
+            </li>
+        <% } %> 
+          </ul>
+        </li>
+      <% } %> 
+      </ul>
+    </nav>
+    
+    <div class="fixed mount mount-top mount-left stretch">
+      <div class="layers stretch">
+        <div class="layer-1"></div>
+        <div class="layer-2"></div>     
+        <div class="layer-3"></div>     
+      </div>
+    </div>
+      
+    <main>
+    <header class="masthead">
+      <div class="frame">
+        <div class="content">
+          <h1>UIX Framework<span class="version">0.1</span></h1> 
+        </div>
+      </div>
+    </header>
+     
+     <div class="articles">
+      <% var which = 'b';for (item_name in sorted_items) { var item = sorted_items[item_name];var item_title = item.title; if (item.title.split('|')[1]) item_title = item.title.split('|')[1]; %>
+      <article class="<%=which%>" id="<%= item.id %>" data-title="<%= item.title %>" data-description="<%= item.resume %>">
+        <header>
+          <h1><%- item_title -%></h1>
+          <%- item.resume -%>
+        </header> 
+        <div class="sections">
+        <% for (section_name in item.sections){if(which=='a') which = 'b'; else which = 'a'; var section = item.sections[section_name]; var section_title = section.title; if (section.title.split('|')[1]) section_title = section.title.split('|')[1];  %>
+        <section class="<%=which%>" id="<%= section.id %>" data-title="<%= section.title %>" data-description="<%= section.resume %>">
+          <div class="content">
+            <h2><%- section_title -%></h2>
+            <%- section.content -%>
+          </div>
+        </section>
+      <% } %> 
+        </div>
+      </article>
+      <br>
+      <% } %> 
+    </div>
+      
+    <footer>
+      <div class="row-2">
+        <div class="col">
+          <div class="row-2">
+            <div class="col">
+              <ul>
+                <li>About</li>
+                <li>Themes</li>
+                <li>Showcase</li>
+                <li>License</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li>Donate</li> 
+                <li>Support</li> 
+                <li>Support</li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+          <div class="col">
+            <article>
+            <p>Sponsored by <a href="https://iohq.org">IOHQ.</a></p>
+            </article>
+          </div>
+      </div>
+    </footer>
+    </main> 
+     
+    <script src="docs/js/script.js"></script>
+    
+  </body>
+</html>

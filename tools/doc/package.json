@@ -1,0 +1,63 @@
+{
+  "_from": "cssdoc",
+  "_id": "cssdoc@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-CdBwifeMypORZrILsOeVs6px8Ao=",
+  "_location": "/cssdoc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cssdoc",
+    "name": "cssdoc",
+    "escapedName": "cssdoc",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cssdoc/-/cssdoc-1.0.0.tgz",
+  "_shasum": "09d07089f78cca939166b20bb0e795b3aa71f00a",
+  "_spec": "cssdoc",
+  "_where": "/home/ec2-user/environment/$",
+  "author": {
+    "name": "Palmer Oliveira",
+    "email": "expalmer@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/expalmer/cssdoc/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "co-fs-extra": "^1.1.0",
+    "gray-matter": "^2.0.2",
+    "highlight.js": "^8.9.1",
+    "marked": "^0.3.5",
+    "slug": "^0.9.1",
+    "swig": "^1.4.2",
+    "walk-sync": "^0.2.6"
+  },
+  "deprecated": false,
+  "description": "Generating Documentation for CSS with Markdown",
+  "homepage": "https://github.com/expalmer/cssdoc#readme",
+  "keywords": [
+    "styleguide",
+    "documentation",
+    "css",
+    "markdown"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cssdoc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expalmer/cssdoc.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "version": "1.0.0"
+}
